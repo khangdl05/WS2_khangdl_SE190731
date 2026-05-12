@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #666;
+    --bg-color: #f8f9fa;
+    --card-bg: #fff;
+    --border-color: #eee;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+}
+
+body.admin-page {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.admin-header p {
+    color: var(--secondary-color);
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.btn-create {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-create:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.table-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-table th {
+    background: #fafafa;
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.admin-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.product-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: #fdfdfd;
+}
+
+.product-name {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-active {
+    background: #e8f5e9;
+    color: var(--success-color);
+}
+
+.status-inactive {
+    background: #ffebee;
+    color: var(--danger-color);
+}
+
+.low-stock {
+    color: var(--danger-color);
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.action-btn.edit {
+    background: #3498db;
+}
+
+.action-btn.delete {
+    background: var(--danger-color);
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

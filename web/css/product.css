@@ -1,0 +1,269 @@
+/* ===== PAGE ===== */
+
+
+.featured-products{
+    width:90%;
+    margin:auto;
+    margin-top:40px;
+}
+
+/* ===== HEADER ===== */
+
+.list-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.list-header h2{
+    font-size:26px;
+    font-weight:600;
+}
+
+.list-header select{
+    padding:6px 10px;
+    border:none;
+    font-size:14px;
+}
+
+/* ===== GRID PRODUCT ===== */
+
+.product-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:60px 40px;
+}
+
+/* ===== CARD ===== */
+
+.product-card{
+    text-align:center;
+}
+
+/* ===== IMAGE ===== */
+
+.image-wrapper{
+    position:relative;
+    overflow:hidden;
+}
+
+.image-wrapper img{
+    width:100%;
+    height:420px;
+    object-fit:contain;
+    transition:0.3s;
+}
+
+/* zoom nhẹ khi hover */
+
+.image-wrapper:hover img{
+    transform:scale(1.05);
+}
+
+/* ===== DISCOUNT ===== */
+
+.discount-badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:black;
+    color:white;
+    padding:5px 8px;
+    font-size:12px;
+}
+
+/* ===== HOVER BUTTON ===== */
+
+.hover-actions{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    right:10px;
+    display:flex;
+    gap:8px;          /* khoảng cách giữa 2 nút */
+    opacity:0;
+    transition:0.3s;
+}
+
+.image-wrapper:hover .hover-actions{
+    opacity:1;
+}
+
+.hover-actions a,
+.hover-actions form,
+.hover-actions button{
+    flex:1;
+}
+
+.hover-actions a,
+.hover-actions button{
+    width: 100%;
+    padding:12px 10px;
+    text-decoration:none;
+    font-size:12px;
+    text-align:center;
+    background:black;     /* nền đen giống nhau */
+    color:white;
+    font-weight:500;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+.hover-actions a:hover,
+.hover-actions button:hover{
+    background:#333;
+}
+/* nút */
+/* remove redundant background overrides */
+
+/* ===== NAME ===== */
+
+.product-card h4{
+    margin-top:14px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ===== PRICE ===== */
+
+.price-box{
+    margin-top:6px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+    font-size:13px;
+    margin-right:6px;
+}
+
+.new-price{
+    font-weight:600;
+    font-size:14px;
+}
+
+/* ===== ADMIN BUTTON ===== */
+
+.admin-mini-actions{
+    margin-top:10px;
+}
+
+.update-btn,
+.remove-btn{
+    font-size:12px;
+    margin:0 4px;
+}
+
+/* PRICE DROPDOWN */
+
+.price-dropdown{
+    position:relative;
+}
+
+/* button giống sort */
+
+.filter-btn{
+    padding:8px 12px;
+    border:1px solid #ccc;
+    background:white;
+    cursor:pointer;
+}
+
+.filter-bar{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+/* menu */
+
+.price-menu{
+
+    position:absolute;
+    top:40px;
+    left:0;
+
+    width:220px;
+
+    background:white;
+    border:1px solid #ddd;
+
+    padding:15px;
+
+    display:none;
+
+    z-index:9999;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* hover hiện */
+
+.price-dropdown:hover .price-menu{
+    display:block;
+}
+
+.price-dropdown::after{
+
+    content:"";
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    width:100%;
+    height:10px;
+}
+/* inputs */
+
+.price-inputs{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.price-inputs input{
+    width:70px;
+    padding:6px;
+    border:1px solid #ccc;
+}
+
+/* apply */
+
+.apply-btn{
+    width:100%;
+    margin-top:10px;
+    padding:7px;
+
+    border:none;
+    background:black;
+    color:white;
+
+    cursor:pointer;
+}
+
+/* quick range */
+
+.price-range{
+    margin-top:10px;
+    display:flex;
+    gap:10px;
+}
+
+.price-range a{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:6px;
+
+    border:1px solid #ccc;
+
+    text-decoration:none;
+    color:black;
+
+    font-size:13px;
+}

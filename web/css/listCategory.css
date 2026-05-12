@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #666;
+    --bg-color: #f8f9fa;
+    --card-bg: #fff;
+    --border-color: #eee;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.admin-account-container, .category-page-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.admin-account-header, .category-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-account-header h2, .category-page-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.admin-create-btn, .category-page-btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-create-btn:hover, .category-page-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.admin-account-table-wrapper, .category-page-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.admin-account-table, .category-page-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-account-table th, .category-page-table th {
+    background: #fafafa;
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.admin-account-table td, .category-page-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+/* Badges */
+.gender-male, .gender-female, .status-active, .status-inactive, .role-admin, .role-manager, .role-user {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.gender-male { background: #e3f2fd; color: #1976d2; }
+.gender-female { background: #fce4ec; color: #c2185b; }
+.status-active { background: #e8f5e9; color: var(--success-color); }
+.status-inactive { background: #ffebee; color: var(--danger-color); }
+.role-admin { background: #fff3e0; color: #e65100; }
+.role-manager { background: #f3e5f5; color: #7b1fa2; }
+.role-user { background: #f5f5f5; color: #616161; }
+
+/* Actions */
+.admin-actions, .category-page-action {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.admin-update-btn, .admin-remove-btn, .admin-active-btn, .category-page-link {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.admin-update-btn, .update-link {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.admin-remove-btn, .remove-link {
+    background: #ffebee;
+    color: var(--danger-color);
+}
+
+.btn-green { background: #e8f5e9; color: var(--success-color); }
+.btn-red { background: #ffebee; color: var(--danger-color); }
+
+.admin-update-btn:hover, .admin-remove-btn:hover, .admin-active-btn:hover, .category-page-link:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .admin-account-table, .category-page-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

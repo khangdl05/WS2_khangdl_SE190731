@@ -1,0 +1,32 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/footer.css">
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <!-- Contact Column -->
+        <div class="footer-column">
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+            <ul class="footer-contact-list">
+                <li>Đặng Lê Khang</li>
+                <li>SĐT: 0848577578</li>
+                <li>MSSV: SE190731</li>
+            </ul>
+        </div>
+
+        <!-- Social Column -->
+        <div class="footer-column">
+            <h3>FOLLOW ME ON SOCIAL MEDIA</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/khangg123"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/dangle_khang/"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <div class="bct-badge">             
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; Ảnh sản phẩm và giao diện được tham khảo từ HADES.VN</p>
+    </div>
+</footer>

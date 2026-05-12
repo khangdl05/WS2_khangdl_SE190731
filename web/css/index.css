@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&family=Inter:wght@400;500;600&display=swap');
+
+/* Basic reset and typography for this specific page */
+body.index-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    overflow-x: hidden;
+}
+
+/* Global Header overrides removed */
+
+/* -------------------------------------------------------------------------- */
+/* HERO BANNER SECTION                                                        */
+/* -------------------------------------------------------------------------- */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    background-image: url('../images/slideshow_3.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Faux models area cleaned up as we now have a real image */
+.hero-models {
+    display: none;
+}
+
+
+.hero-text-bottom {
+    position: absolute;
+    bottom: -1vw; /* Pull it slightly more to the edge */
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Bring it forward */
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.hero-text-bottom h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14vw;
+    font-weight: 900;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+/* Add more random floating stars like in the user's image */
+.hero-banner::before,
+.hero-banner::after {
+    content: "★";
+    position: absolute;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.5); /* Semi-transparent white stars */
+    z-index: 5;
+    filter: blur(1px);
+}
+.hero-banner::before { top: 20%; left: 10%; transform: rotate(-15deg); font-size: 60px; }
+.hero-banner::after { top: 35%; right: 15%; transform: rotate(25deg); font-size: 100px; }
+
+
+/* -------------------------------------------------------------------------- */
+/* FEATURED PRODUCTS (NEW ARRIVALS)                                           */
+/* -------------------------------------------------------------------------- */
+.featured-products-wrapper {
+    max-width: 1500px;
+    margin: 100px auto;
+    padding: 0 50px;
+}
+
+.featured-products-wrapper h2 {
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px;
+}
+
+.col-product {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.product-img-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.col-product:hover .product-img-box img {
+    transform: scale(1.08); /* slight dramatic zoom */
+}
+
+.hot-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 10px;
+    z-index: 2;
+    border-radius: 2px;
+}
+
+/* Quick View Overlay Button */
+.view-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 3;
+    border-top: 1px solid #eee;
+}
+
+.col-product:hover .view-btn {
+    transform: translateY(0);
+}
+
+.view-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.product-info {
+    text-align: left;
+}
+
+.product-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    line-height: 1.4;
+    /* Limit to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.price-strikethrough {
+    color: #a0a0a0;
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.price-current {
+    color: #000;
+}
+
+/* -------------------------------------------------------------------------- */
+/* RESPONSIVE DESIGN                                                          */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-models {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+    .hero-text-bottom h1 {
+        font-size: 18vw;
+    }
+    .model-placeholder:nth-child(3),
+    .model-placeholder:nth-child(4) {
+        display: none; /* Show only 2 models on smaller screens */
+    }
+/* Responsive header overrides removed */
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-text-bottom h1 {
+        font-size: 20vw;
+        bottom: 5vh;
+    }
+    .featured-products-wrapper {
+        padding: 0 20px;
+        margin: 50px auto;
+    }
+/* Logo override removed */
+}
